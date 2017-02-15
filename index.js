@@ -44,7 +44,7 @@ if (cli.input.length === 2) {
         var outPath = _path2.default.resolve(item.path.replace(n, o));
 
         _shelljs2.default.echo(_chalk2.default.green('Minifying') + '\n' + inPath + ' to...\n' + outPath + '\n');
-        _shelljs2.default.exec('mkdir -p ' + _path2.default.dirname(outPath));
+        _shelljs2.default.mkdir('-p', '' + _path2.default.dirname(outPath));
         _shelljs2.default.exec('node_modules/.bin/imagemin ' + inPath + ' > ' + outPath);
       }
     });
